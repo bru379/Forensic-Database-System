@@ -175,3 +175,21 @@ Add screenshots of:
 ## 📄 License
 
 This project was developed for academic purposes.
+
+```mermaid
+erDiagram
+
+PATIENTS ||--o{ CASES : has
+
+PATIENTS {
+    int PatientID PK
+    string FullName
+    string NIC
+}
+
+CASES {
+    int CaseID PK
+    int PatientID FK
+    string CaseNumber
+}
+```
